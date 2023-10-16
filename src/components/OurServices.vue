@@ -2,7 +2,7 @@
     <div class="services">
         <div class="services__item" v-for="(item, index) in items" :key="index">
             <div class="services__icon">
-                <img src="../assets/images/Frame1.png">
+                <img :src="item.icon">
             </div>
             <div class="services__title">
                 {{ item.title }}
@@ -20,27 +20,27 @@ export default {
         return {
             items: [
                 {
-                    icon: '@/assets/images/Frame1.png',
+                    icon: require('@/assets/images/Frame1.png'),
                     title: 'Search doctor',
                     text: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
                 }, {
-                    icon: '@/assets/images/Frame2.png',
+                    icon: require('@/assets/images/Frame2.png'),
                     title: 'Online pharmacy',
                     text: 'Buy  your medicines with our mobile application with a simple delivery system'
                 }, {
-                    icon: '@/assets/images/Frame3.png',
+                    icon: require('@/assets/images/Frame3.png'),
                     title: 'Consultation',
                     text: 'Free consultation with our trusted doctors and get the best recomendations'
                 }, {
-                    icon: '@/assets/images/Frame4.png',
+                    icon: require('@/assets/images/Frame4.png'),
                     title: 'Details info',
                     text: 'Free consultation with our trusted doctors and get the best recomendations'
                 }, {
-                    icon: '@/assets/images/Frame5.png',
+                    icon: require('@/assets/images/Frame5.png'),
                     title: 'Emergency care',
                     text: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
                 }, {
-                    icon: '@/assets/images/Frame6.png',
+                    icon: require('@/assets/images/Frame6.png'),
                     title: 'Tracking',
                     text: 'Track and save your medical history and health data'
                 },
@@ -53,9 +53,10 @@ export default {
 
 <style lang="scss" scoped>
 .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 80px 0 70px;
 
     img {
         width: 90px;

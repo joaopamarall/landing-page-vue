@@ -30,9 +30,9 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   text-align: left;
 
@@ -46,8 +46,8 @@ export default {
   }
 
   &__text {
-    margin: 25px 0 45px;
-    font-size: 21px;
+    margin: 0;
+    font-size: 18px;
     line-height: 32px;
     width: 448px;
     height: 96px;
@@ -57,7 +57,6 @@ export default {
     width: 56px;
     height: 2px;
     background-color: #000000;
-    margin: 26px 0 34px;
     border-radius: 5px;
   }
 }

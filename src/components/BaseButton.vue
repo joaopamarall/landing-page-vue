@@ -1,7 +1,7 @@
 <template>
     <button :class="customStyle">
         {{ label }}
-        <!--<img v-if="hasIcon" src="../assets/download-btn.svg">-->
+        <img v-if="hasIcon" src="../assets/down-btn.svg">
     </button>
 </template>
 
@@ -24,11 +24,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+button:hover {
+    cursor: pointer;
+}
+
 .primary {
     background-color: #458FF6;
     color: #FFF;
     width: 200px;
     height: 60px;
+    font-weight: 700;
     border-radius: 56px;
     border: none;
     font-size: 18px;
@@ -40,6 +45,7 @@ export default {
     color: #458FF6;
     width: 200px;
     height: 56px;
+    font-weight: 700;
     border-radius: 56px;
     border: 1px solid #458FF6;
     font-size: 18px;

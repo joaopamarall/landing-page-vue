@@ -20,10 +20,7 @@
         </div>
         <div class="carousel__actions">
             <img src="../assets/left-btn.svg" @click="backItem">
-            <span
-                v-for="(item, index) in items"
-                :key="index"
-                class="bolinha"
+            <span v-for="(item, index) in items" :key="index" class="bolinha"
                 :class="{ active: index === currentItemIndex, inactive: index !== currentItemIndex }">
             </span>
             <img src="../assets/right-btn.svg" @click="nextItem">
@@ -40,7 +37,7 @@ export default {
                 {
                     title: 'What our customer are saying',
                     icon: require('@/assets/image1.png'),
-                    description:'“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”',
+                    description: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”',
                     name: 'Edward Newgate',
                     profession: 'Founder Circle'
                 },
@@ -98,7 +95,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(to right, #5A98F2 0%, #67C3F3 100% );
+        background: linear-gradient(to right, #5A98F2 0%, #67C3F3 100%);
         border-radius: 24px;
     }
 
@@ -161,12 +158,21 @@ export default {
             border-radius: 50%;
             width: 10px;
             height: 10px;
-            margin:0 18px;
+            margin: 0 18px;
             opacity: 0.5;
 
             &.active {
                 opacity: 1;
             }
+        }
+
+        img {
+            width: 28px;
+            margin: 0 88px;
+        }
+
+        img:hover {
+            cursor: pointer;
         }
     }
 }

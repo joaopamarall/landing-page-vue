@@ -44,7 +44,6 @@ export default {
                     title: 'Tracking',
                     text: 'Track and save your medical history and health data'
                 },
-
             ]
         }
     },
@@ -58,7 +57,7 @@ export default {
     gap: 32px;
     margin: 80px 0 70px;
 
-    img {
+    &__icon {
         width: 100%;
         height: auto;
     }

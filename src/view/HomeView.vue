@@ -40,7 +40,10 @@
             <section class="home__carousel">
                 <the-carousel />
             </section>
-            <section class="home__article"></section>
+            <section class="home__article">
+                <the-article />
+                <base-button label="View all" customStyle="basic"></base-button>
+            </section>
         </div>
         <the-footer />
     </div>
@@ -53,6 +56,7 @@ import BaseCard from '@/components/BaseCard.vue'
 import OurServices from '@/components/OurServices.vue'
 import BaseButton from '@/components/BaseButton.vue'
 import TheCarousel from '@/components/TheCarousel.vue'
+import TheArticle from '@/components/TheArticle.vue'
 
 export default {
     components: {
@@ -61,7 +65,8 @@ export default {
         BaseCard,
         OurServices,
         BaseButton,
-        TheCarousel
+        TheCarousel,
+        TheArticle
     },
 }
 </script>
@@ -182,6 +187,13 @@ body {
                     width: 420px;
                     height: 120px;
                 }
+
+                button {
+                    img {
+                        width: 12px;
+                        margin-left: 12px;
+                    }
+                }
             }
 
             .basic {
@@ -191,6 +203,13 @@ body {
 
         &__carousel {
             margin-top: 260px;
+        }
+
+        &__article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 68px;
         }
     }
 }

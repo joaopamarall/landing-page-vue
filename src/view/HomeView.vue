@@ -9,7 +9,7 @@
                         <base-button label="Consult today" customStyle="primary" />
                     </template>
                 </base-card>
-                <img src="../assets/images/trafalgar-header-illustration-1.png">
+                <img src="../assets/trafalgar-header-illustration-1.png">
             </section>
             <section class="home__services">
                 <base-card title="Our Services" hasSeparator
@@ -18,7 +18,7 @@
                 <base-button label="Learn more" customStyle="basic" />
             </section>
             <section class="home__leading">
-                <img src="../assets/images/trafalgar-illustration sec02 1.png">
+                <img src="../assets/trafalgar-illustration sec02 1.png">
                 <base-card title="Leading healthcare providers"
                     text="Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver"
                     hasSeparator>
@@ -32,14 +32,15 @@
                     text="Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
                     hasSeparator>
                     <template #button>
-                        <base-button label="Download" customStyle="basic" />
+                        <base-button label="Download" customStyle="basic" hasIcon />
                     </template>
                 </base-card>
-                <img src="../assets/images/trafalgar-illustration sec03 1.png">
+                <img src="../assets/trafalgar-illustration sec03 1.png">
             </section>
-            <section class="home__slider">
-                <base-slider />
+            <section class="home__carousel">
+                <the-carousel />
             </section>
+            <section class="home__article"></section>
         </div>
         <the-footer />
     </div>
@@ -51,7 +52,7 @@ import TheFooter from '@/components/TheFooter.vue'
 import BaseCard from '@/components/BaseCard.vue'
 import OurServices from '@/components/OurServices.vue'
 import BaseButton from '@/components/BaseButton.vue'
-import BaseSlider from '@/components/BaseSlider.vue'
+import TheCarousel from '@/components/TheCarousel.vue'
 
 export default {
     components: {
@@ -60,7 +61,7 @@ export default {
         BaseCard,
         OurServices,
         BaseButton,
-        BaseSlider
+        TheCarousel
     },
 }
 </script>
@@ -72,17 +73,11 @@ body {
     color: #7D7987;
 
     .home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
         font-family: 'Mulish', sans-serif;
 
         &__content {
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            max-width: 1024px;
         }
 
         &__introdution {
@@ -90,12 +85,12 @@ body {
             grid-template-columns: repeat(2, 1fr);
 
             img {
-                width: 690px;
-                height: 598px;
+                width: 100%;
+                height: auto;
             }
 
             .card {
-                width: 448px;
+                max-width: 448px;
 
                 &__title {
                     font-size: 48px;
@@ -142,8 +137,8 @@ body {
             grid-template-columns: repeat(2, 1fr);
 
             img {
-                width: 650px;
-                height: 480px;
+                width: 100%;
+                height: auto;
             }
 
             .card {
@@ -166,13 +161,12 @@ body {
             margin: 260px 0 0;
 
             img {
-                width: 664px;
-                height: 436px;
+                width: 100%;
+                height: auto;
             }
 
             .card {
-                width: 420px;
-                height: 376px;
+                max-width: 420px;
 
                 &__title {
                     width: 252px;
@@ -193,6 +187,10 @@ body {
             .basic {
                 margin: 40px 0 0;
             }
+        }
+
+        &__carousel {
+            margin-top: 260px;
         }
     }
 }

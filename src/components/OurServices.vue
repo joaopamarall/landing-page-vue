@@ -20,27 +20,27 @@ export default {
         return {
             items: [
                 {
-                    icon: require('@/assets/images/Frame1.png'),
+                    icon: require('@/assets/Frame1.png'),
                     title: 'Search doctor',
                     text: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
                 }, {
-                    icon: require('@/assets/images/Frame2.png'),
+                    icon: require('@/assets/Frame2.png'),
                     title: 'Online pharmacy',
                     text: 'Buy  your medicines with our mobile application with a simple delivery system'
                 }, {
-                    icon: require('@/assets/images/Frame3.png'),
+                    icon: require('@/assets/Frame3.png'),
                     title: 'Consultation',
                     text: 'Free consultation with our trusted doctors and get the best recomendations'
                 }, {
-                    icon: require('@/assets/images/Frame4.png'),
+                    icon: require('@/assets/Frame4.png'),
                     title: 'Details info',
                     text: 'Free consultation with our trusted doctors and get the best recomendations'
                 }, {
-                    icon: require('@/assets/images/Frame5.png'),
+                    icon: require('@/assets/Frame5.png'),
                     title: 'Emergency care',
                     text: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
                 }, {
-                    icon: require('@/assets/images/Frame6.png'),
+                    icon: require('@/assets/Frame6.png'),
                     title: 'Tracking',
                     text: 'Track and save your medical history and health data'
                 },
@@ -59,16 +59,16 @@ export default {
     margin: 80px 0 70px;
 
     img {
-        width: 90px;
-        height: 90px;
+        width: 100%;
+        height: auto;
     }
 
     &__item {
         background-color: #ffffff;
         border-radius: 20px;
-        padding: 48px 0 0 36px;
-        width: 350px;
-        height: 354px;
+        padding: 48px 12px 40px 36px;
+        width: 100%;
+        height: auto;
         box-shadow: 10px 40px 50px 0px #dfe4f666;
         display: flex;
         flex-direction: column;
@@ -89,8 +89,8 @@ export default {
         font-weight: 300;
         color: #7D7987;
         line-height: 28px;
-        width: 260px;
-        height: 84px;
+        width: 100%;
+        height: auto;
     }
 }
 </style>

@@ -1,5 +1,8 @@
 <template>
-    <button :class="customStyle">{{ label }}</button>
+    <button :class="customStyle">
+        {{ label }}
+        <!--<img v-if="hasIcon" src="../assets/download-btn.svg">-->
+    </button>
 </template>
 
 <script>
@@ -11,6 +14,10 @@ export default {
         customStyle: {
             type: String,
             default: 'primary',
+        },
+        hasIcon: {
+            type: Boolean,
+            default: false
         }
     },
 }

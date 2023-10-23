@@ -5,6 +5,9 @@ module.exports = defineConfig({
     loaderOptions: {
       sass: {
         implementation: require('sass'),
+        sassOptions: {
+          prependData: `@import "@/styles/global.scss";`
+        }
       },
     },
   },

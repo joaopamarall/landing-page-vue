@@ -35,14 +35,16 @@ export default {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  width: 100%;
+  height: auto;
 
   &__title {
     margin: 0;
-    width: 480px;
+    max-width: 480px;
+    height: 112px;
     font-size: 36px;
     line-height: 56px;
     color: #000000;
-    height: 112px;
   }
 
   &__text {
@@ -55,8 +57,8 @@ export default {
 
   &__separator {
     width: 56px;
-    height: 2px;
     background-color: #000000;
+    border-color: #000000;
     border-radius: 5px;
   }
 }

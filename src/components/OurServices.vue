@@ -1,14 +1,16 @@
 <template>
     <div class="services">
-        <div class="services__item" v-for="(item, index) in items" :key="index">
-            <div class="services__icon">
-                <img :src="item.icon">
-            </div>
-            <div class="services__title">
-                {{ item.title }}
-            </div>
-            <div class="services__text">
-                {{ item.text }}
+        <div class="services__items">
+            <div class="services__item" v-for="(item, index) in items" :key="index">
+                <div class="services__icon">
+                    <img :src="item.icon">
+                </div>
+                <div class="services__title">
+                    {{ item.title }}
+                </div>
+                <div class="services__text">
+                    {{ item.text }}
+                </div>
             </div>
         </div>
     </div>
@@ -52,25 +54,24 @@ export default {
 
 <style lang="scss" scoped>
 .services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin: 80px 0 70px;
 
     &__icon {
         width: 100%;
         height: auto;
     }
 
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin: 80px 0 70px;
+    }
+
     &__item {
         background-color: #ffffff;
         border-radius: 20px;
         padding: 48px 12px 40px 36px;
-        width: 100%;
-        height: auto;
         box-shadow: 10px 40px 50px 0px #dfe4f666;
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
@@ -91,5 +92,6 @@ export default {
         width: 100%;
         height: auto;
     }
+
 }
 </style>

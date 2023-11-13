@@ -1,13 +1,13 @@
 <template>
   <div class="header">
     <BaseIcon />
-    <div class="header__routes">
-      <div class="header__home">Home</div>
-      <div class="header__findADoctor">Find a doctor</div>
-      <div class="header__apps">Apps</div>
-      <div class="header__testimonials">Testimonials</div>
-      <div class="header__aboutUs">About us</div>
-    </div>
+      <ul class="header__routes">
+        <li class="header__home">Home</li>
+        <li class="header__findADoctor">Find a doctor</li>
+        <li class="header__apps">Apps</li>
+        <li class="header__testimonials">Testimonials</li>
+        <li class="header__aboutUs">About us</li>
+      </ul>
   </div>
 </template>
 
@@ -28,13 +28,20 @@ export default {
   justify-content: space-between;
   color: #1F1534;
 
+  &__button {
+    display: none;
+  }
+
   &__routes {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 40px;
     font-weight: 400;
     font-size: 18px;
+  }
+  
+  ul {
+    list-style: none;
   }
 
   &__home {

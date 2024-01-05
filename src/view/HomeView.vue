@@ -73,7 +73,7 @@ export default {
 
 <style lang="scss">
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     color: #7D7987;
 
@@ -90,7 +90,7 @@ body {
                 margin: 0 20px;
 
                 &__button {
-                    display: block;
+                    display: none;
                 }
 
                 &__routes {

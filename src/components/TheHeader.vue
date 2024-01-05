@@ -1,7 +1,10 @@
 <template>
   <div class="header">
     <BaseIcon />
-      <ul class="header__routes">
+    <button class="header__button" @click="toggleMenu">
+    Menu
+    </button>
+      <ul class="header__routes" :class="isActiveMenu">
         <li class="header__home">Home</li>
         <li class="header__findADoctor">Find a doctor</li>
         <li class="header__apps">Apps</li>
@@ -15,7 +18,18 @@
 import BaseIcon from '@/components/BaseIcon.vue'
 
 export default {
-  components: { BaseIcon, }
+  components: { BaseIcon, },
+  data() {
+    return {
+      isActiveMenu: false,
+    }
+  },
+
+  methods: {
+    toggleMenu() {
+      this.isActiveMenu = !this.isActiveMenu
+    }
+  }
 }
 </script>
 
@@ -48,18 +62,9 @@ export default {
     font-weight: 700;
   }
 
-  &__findADoctor {
-    opacity: 0.5;
-  }
-
-  &__apps {
-    opacity: 0.5;
-  }
-
-  &__testimonials {
-    opacity: 0.5;
-  }
-
+  &__findADoctor,
+  &__apps,
+  &__testimonials,
   &__aboutUs {
     opacity: 0.5;
   }

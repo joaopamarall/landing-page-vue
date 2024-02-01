@@ -1,36 +1,34 @@
 <template>
   <div class="header">
     <BaseIcon />
-    <button class="header__button" @click="toggleMenu">
-    Menu
-    </button>
-      <ul class="header__routes" :class="isActiveMenu">
-        <li class="header__home">Home</li>
-        <li class="header__findADoctor">Find a doctor</li>
-        <li class="header__apps">Apps</li>
-        <li class="header__testimonials">Testimonials</li>
-        <li class="header__aboutUs">About us</li>
-      </ul>
+    <button class="header__button" @click="toggleMenu">Menu</button>
+    <ul class="header__routes" :class="isActiveMenu">
+      <li class="header__home">Home</li>
+      <li class="header__findADoctor">Find a doctor</li>
+      <li class="header__apps">Apps</li>
+      <li class="header__testimonials">Testimonials</li>
+      <li class="header__aboutUs">About us</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import BaseIcon from '@/components/BaseIcon.vue'
+import BaseIcon from "@/components/BaseIcon.vue";
 
 export default {
-  components: { BaseIcon, },
+  components: { BaseIcon },
   data() {
     return {
       isActiveMenu: false,
-    }
+    };
   },
 
   methods: {
     toggleMenu() {
-      this.isActiveMenu = !this.isActiveMenu
-    }
-  }
-}
+      this.isActiveMenu = !this.isActiveMenu;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -40,7 +38,7 @@ export default {
   max-width: 1024px;
   display: flex;
   justify-content: space-between;
-  color: #1F1534;
+  color: #1f1534;
 
   &__button {
     display: none;
@@ -53,7 +51,7 @@ export default {
     font-weight: 400;
     font-size: 18px;
   }
-  
+
   ul {
     list-style: none;
   }

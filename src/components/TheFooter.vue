@@ -4,8 +4,9 @@
       <div class="footer__trafalgar">
         <BaseIcon customLogo="secundary" />
         <div class="footer__description">
-          Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone   ,
-          </div>
+          Trafalgar provides progressive, and affordable healthcare, accessible
+          on mobile and online for everyone ,
+        </div>
         <div>©Trafalgar PTY LTD 2020. All rights reserved</div>
       </div>
       <div class="footer__infos">
@@ -36,11 +37,11 @@
 </template>
 
 <script>
-import BaseIcon from '@/components/BaseIcon.vue'
+import BaseIcon from "@/components/BaseIcon.vue";
 
 export default {
-  components: { BaseIcon }
-}
+  components: { BaseIcon },
+};
 </script>
 
 <style lang="scss">
@@ -48,7 +49,7 @@ export default {
   width: 100%;
   height: auto;
   color: white;
-  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
   margin-top: 100px;
 
   &__content {
@@ -84,9 +85,9 @@ export default {
   }
 
   &__description {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0 32px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 32px;
   }
 
   &__company {

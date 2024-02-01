@@ -3,7 +3,7 @@
     <h1 class="card__title">
       {{ title }}
     </h1>
-    <hr v-if="hasSeparator" class="card__separator">
+    <hr v-if="hasSeparator" class="card__separator" />
     <div class="card__text">
       {{ text }}
     </div>
@@ -24,8 +24,8 @@ export default {
       type: Boolean,
       default: false,
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

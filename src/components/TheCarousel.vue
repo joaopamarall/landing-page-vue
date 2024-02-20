@@ -21,7 +21,7 @@
     <div class="carousel__actions">
       <img src="../assets/left-btn.svg" @click="backItem" />
       <span
-        v-for="(item, index) in items"
+        v-for="index in items"
         :key="index"
         class="bolinha"
         :class="{
@@ -43,7 +43,7 @@ export default {
       items: [
         {
           title: "What our customer are saying",
-          icon: require("@/assets/image1.png"),
+          icon: require("@/assets/image-person-1.png"),
           description:
             "“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”",
           name: "Edward Newgate",
@@ -51,7 +51,7 @@ export default {
         },
         {
           title: "Testimonial from a Satisfied User",
-          icon: require("@/assets/image1.png"),
+          icon: require("@/assets/image-person-2.jpg"),
           description:
             "“The service is incredibly efficient, and the support is top-notch.”",
           name: "Alice Johnson",
@@ -59,7 +59,7 @@ export default {
         },
         {
           title: "Impressions of Our Service",
-          icon: require("@/assets/image1.png"),
+          icon: require("@/assets/image-person-3.jpg"),
           description:
             "“The app has improved our workflow and made communication with clients seamless.”",
           name: "John Smith",
@@ -67,7 +67,7 @@ export default {
         },
         {
           title: "Feedback from Our Customers",
-          icon: require("@/assets/image1.png"),
+          icon: require("@/assets/image-person-5.jpg"),
           description:
             "“Our business has seen remarkable growth with the use of this platform.”",
           name: "Sarah Davis",
@@ -140,6 +140,7 @@ export default {
     img {
       border: 4px solid #ffffff;
       border-radius: 50%;
+      max-width: 100px;
     }
   }
 
